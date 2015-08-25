@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>WebSockets</title>
+        <link rel="stylesheet" href="library/styles/main.css">
+    </head>
+    <body>
+        <div id="main">
+            
+            <!-- The hands -->
+            <div id="hands" class="swipe">
+                <div class="swipe-wrap">
+                    <div class="slide active">
+                        <!-- Hand -->
+                        <img src="library/images/h1/h1.jpg" width="1024px" height="768px">
+
+                        <!-- The nail colours -->
+                        <img src="library/images/h1/c0/f0.png" class="finger0 finger" style="opacity: 0;">
+                        <img src="library/images/h1/c0/f1.png" class="finger1 finger" style="opacity: 0;">
+                        <img src="library/images/h1/c0/f2.png" class="finger2 finger" style="opacity: 0;">
+                        <img src="library/images/h1/c0/f3.png" class="finger3 finger" style="opacity: 0;">
+                        <img src="library/images/h1/c0/f4.png" class="finger4 finger" style="opacity: 0;">
+
+                        <!-- Inactive overlay -->
+                        <div class="inactiveOverlay" style="opacity: 0;"></div>
+                    </div>
+                    <div class="slide">
+                        <!-- Hand -->
+                        <img src="library/images/h2/h2.jpg" width="1024px" height="768px">
+
+                        <!-- The nail colours -->
+                        <img src="library/images/h2/c0/f0.png" class="finger0 finger" style="opacity: 0;">
+                        <img src="library/images/h2/c0/f1.png" class="finger1 finger" style="opacity: 0;">
+                        <img src="library/images/h2/c0/f2.png" class="finger2 finger" style="opacity: 0;">
+                        <img src="library/images/h2/c0/f3.png" class="finger3 finger" style="opacity: 0;">
+                        <img src="library/images/h2/c0/f4.png" class="finger4 finger" style="opacity: 0;">
+
+                        <!-- Inactive overlay -->
+                        <div class="inactiveOverlay"></div>
+                    </div>
+                    <div class="slide">
+                        <!-- Hand -->
+                        <img src="library/images/h3/h3.jpg" width="1024px" height="768px">
+                        
+                        <!-- The nail colours -->
+                        <img src="library/images/h3/c0/f0.png" class="finger0 finger" style="opacity: 0;">
+                        <img src="library/images/h3/c0/f1.png" class="finger1 finger" style="opacity: 0;">
+                        <img src="library/images/h3/c0/f2.png" class="finger2 finger" style="opacity: 0;">
+                        <img src="library/images/h3/c0/f3.png" class="finger3 finger" style="opacity: 0;">
+                        <img src="library/images/h3/c0/f4.png" class="finger4 finger" style="opacity: 0;">
+
+                        <!-- Inactive overlay -->
+                        <div class="inactiveOverlay"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The left skintone button -->
+            <a href="#" id="leftBtn">Left</a>
+
+            <!-- The shades selected by the user -->
+            <ul id="shades">
+                <li id="colour0" class="inactive">
+                    <span id="colourCode0" class="colourCode"></span>
+                    <span id="colourName0" class="colourName"></span>
+                </li>
+                <li id="colour1" class="inactive">
+                    <span id="colourCode1" class="colourCode"></span>
+                    <span id="colourName1" class="colourName"></span>
+                </li>
+                <li id="colour2" class="inactive">
+                    <span id="colourCode2" class="colourCode"></span>
+                    <span id="colourName2" class="colourName"></span>
+                </li>
+                <li id="colour3" class="inactive">
+                    <span id="colourCode3" class="colourCode"></span>
+                    <span id="colourName3" class="colourName"></span>
+                </li>
+                <li id="colour4" class="inactive">
+                    <span id="colourCode4" class="colourCode"></span>
+                    <span id="colourName4" class="colourName"></span>
+                </li>
+            </ul>
+
+            <!-- Dots to show the active skin tone -->
+            <div id="dots">
+                <ul>
+                    <li class="dot0 active">&nbsp;</li>
+                    <li class="dot1">&nbsp;</li>
+                    <li class="dot2">&nbsp;</li>
+                </ul>
+            </div>
+            
+            <!-- Demo screen -->
+            <div id="demo" style="opacity: 0">
+                <div id="demoImages">
+                    <img src="library/images/h3/h3.jpg" id="demoSlide2" class="demoSlides">
+                    <img src="library/images/h2/h2.jpg" id="demoSlide1" class="demoSlides">
+                    <img src="library/images/h1/h1.jpg" id="demoSlide0" class="demoSlides">
+                </div>
+
+                <div id="demoOverlay">
+                    <div id="nailPolish"></div>
+                    <div id="downArrow"></div>
+                </div>
+            </div>
+
+            <!-- The right skintone button -->
+            <a href="#" id="rightBtn">Right</a>
+        </div>
+    </body>
+</html>

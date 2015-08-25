@@ -1,0 +1,44 @@
+/*********************
+
+Authors:
+	Gareth Williams
+
+Stylesheet:
+	Utilities stylesheet
+
+*********************/
+
+// some reusable bits
+.clear-float {
+	clear: both;
+	height: 1px;
+	background: transparent;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+// style for the notice about old browsers
+.browsehappy {
+	color: $white;
+	background: $error;
+}
+
+// style for the container of the page elements
+.container {
+	position: relative;
+	max-width: 545px;
+	padding: 0 20px;
+	margin: auto;
+}

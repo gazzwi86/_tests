@@ -1,0 +1,115 @@
+/*********************
+
+Authors:
+	Gareth Williams
+
+Stylesheet:
+	Index page stylesheet
+
+*********************/
+
+table {
+	font-size: 1.8em;
+	width: 100%;
+
+	@media screen and (min-width: 768px){
+		th:first-child, td:first-child {
+			padding-left: 20px;
+		}
+	}
+}
+
+table.basket_items {
+	margin-top: 65px;
+	
+	th {
+		border-bottom: $table-border solid 2px;
+	}
+
+	th:last-child {
+		border-bottom: none;
+	}
+
+	tr:nth-child(2) {
+		td {
+			background-color: $tr-background;
+		}
+
+		td:last-child {
+			background-color: transparent;
+		}
+	}
+
+	td {
+		padding: 10px 0;	
+	
+		&.qty_cell {
+			min-width: 61px;
+		}
+
+		input.quantity {
+			float: left;
+			padding: 8px 4px;
+			margin: 0 3px 0 0;
+			text-align: right;
+			border: $input_border solid 1px;
+		}
+		
+		.amend_quantities {
+			float: left;
+			position: relative;
+			width: 16px;
+			height: 30px;
+
+			a {
+				float: left;
+				width: 16px;
+				height: 14px;
+				margin-bottom: 3px;
+				line-height: 11px;
+				text-align: center;
+				text-decoration: none;
+				color: $white;
+				background-color: $input_border;
+			}
+
+			a.up {
+				line-height: 13px;
+			}
+		}
+	}
+
+	tr:first-child {
+		td {
+			padding-top: 23px;
+		}
+	}
+
+	@media screen and (min-width: 768px){
+		td:first-child {
+			padding: 10px 0 10px 20px;
+		}
+	}
+}
+
+table.basket_subtotal {
+	margin-top: 40px;
+	color: $footer-color;
+}
+
+table.basket_total {
+	margin-top: 30px;
+}
+
+.buy_now_button {
+	float: right;
+	padding: 15px 10px;
+	margin-top: 55px;
+	text-decoration: none;
+	font-size: 2.4em;
+	font-family: DroidSerif-Bold;
+	color: $white;
+	background-color: $buy_now_btn;
+	@include border-radius(7px);
+	@include box-shadow(rgba(0, 0, 0, 0.53) 1px 1px 5px);
+}

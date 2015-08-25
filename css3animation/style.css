@@ -1,0 +1,565 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+	color: #222;
+}
+
+body {
+	font-size: 1em;
+	line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+	vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+	resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+@font-face {
+	font-family: "Burberry-Capitals";
+	src: url('../fonts/burberrycapitals-webfont.woff') format('woff');
+}
+
+@font-face {
+	font-family: "Perpetua-Italic";
+	src: url('../fonts/perpetua-mt-italic.woff') format('woff');
+}
+
+html,
+body {
+	font-family: "Burberry-Capitals";
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+#main {
+	position: relative;
+	width: 1024px;
+	height: 768px;
+	overflow: hidden;
+}
+
+	.swipe {
+		position: relative;
+		overflow: hidden;
+		visibility: hidden;
+	}
+	
+		.swipe-wrap {
+			position: relative;
+			overflow: hidden;
+		}
+	
+		.swipe-wrap > div {
+			float: left;
+			width: 100%;
+			position: relative;
+		}
+
+			.finger {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 1024px;
+				height: 768px;
+			}
+
+			.inactiveOverlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 1024px;
+				height: 768px;
+				background: #000;
+				opacity: 0.6;
+			}
+
+	#leftBtn,
+	#rightBtn {
+		position: absolute;
+		top: 368px;
+		width: 32px;
+		height: 64px;
+		line-height: 768px;
+		text-indent: -5000px;
+	}
+
+	#leftBtn {
+		left: 20px;
+		background: transparent url(../images/left.png) no-repeat center;
+		background-size: 32px 64px;
+	}
+
+	#rightBtn {
+		right: 20px;
+		background: transparent url(../images/right.png) no-repeat center;
+		background-size: 32px 64px;
+	}
+
+	#shades {
+		position: absolute;
+		top: 0;
+		width: 1024px;
+		height: 60px;
+	}
+		#shades li {
+			float: left;
+			width: 141px;
+			height: 87px;
+			margin: 0 79px 5px 0;
+			list-style: none;
+			background: url(../images/dash.png) no-repeat center;
+			box-shadow: 0px 0px 8px #5b5b5b;
+		}
+
+		#shades li.inactive {
+			background: url(../images/tri.png) no-repeat center 26px;
+			background-size: 30px 15px;
+			box-shadow: none;
+		}
+
+		#shades li:last-child {
+			float: right;
+			margin-right: 0;
+		}
+
+			.colourCode {
+				float: left;
+				width: 141px;
+				text-align: center;
+				line-height: 43px;
+				font-size: 12px;
+				color: #fff;
+			}
+			.colourName {
+				float: left;
+				width: 141px;
+				text-align: center;
+				line-height: 43px;
+				font-size: 19px;
+				color: #fff;
+				font-style: italic;
+				font-family: "Perpetua-Italic";
+			}
+	
+	#dots {
+		position: absolute;
+		width: 1024px;
+		bottom: 29px;
+	}
+
+		#dots ul {
+			position: relative;
+			width: 60px;
+			height: 18px;
+			margin: 0 auto;
+		}
+			
+			#dots li {
+				float: left;
+				width: 9px;
+				height: 9px;
+				margin: 0 15px 0 0;
+				border-radius: 20px;
+				list-style: none;
+				background: #fff;
+				opacity: 0.4;
+			}
+
+			#dots li:last-child {
+				margin: 0;
+			}
+
+			#dots li.active {
+				opacity: 1;
+			}
+
+	#demo {
+		position: relative;
+		top: -768px;
+		left: 0;
+		width: 1024px;
+		height: 768px;
+	}
+
+		.demoSlides {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 1024px;
+			height: 768px;
+		}
+
+		#demoSlide0{
+			-webkit-animation: demoSlideZero 6s ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+		}
+
+        #demoSlide1{
+    		-webkit-animation: demoSlideOne 6s ease-in-out;
+    		-webkit-animation-iteration-count: infinite;
+        }
+
+		#demoOverlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 1024px;
+			height: 768px;
+			background: url(../images/demo.png) no-repeat 0 0;
+			background-size: 1024px 768px;
+		}
+
+		#nailPolish {
+			position: absolute;
+			top: 92px;
+			left: 480px;
+			width: 62px;
+			height: 182px;
+			background: url(../images/nailVarnish.png) no-repeat 0 0;
+			background-size: 62px 182px;
+			-webkit-animation: nailVarnish 6s ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+		}
+
+		#downArrow {
+			position: absolute;
+			top: 303px;
+			left: 500px;
+			width: 24px;
+			height: 12px;
+			background: url(../images/downArrow.png) no-repeat 0 0;
+			background-size: 24px 12px;
+			-webkit-animation: downArrow 6s ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+		}
+
+@-webkit-keyframes downArrow {  
+	0%, 100% {
+		-webkit-transform: translateY(0px);
+	}
+}
+
+@-webkit-keyframes nailVarnish {  
+	0%, 100% {
+		-webkit-transform: translateY(0px);
+	}
+}
+
+@-webkit-keyframes demoSlideZero {  
+	0%, 100% {
+		-webkit-transform: translateY(0px);
+	}
+}
+
+@-webkit-keyframes demoSlideOne {  
+	0%, 100% {
+		-webkit-transform: translateY(0px);
+	}
+}
+
+
+#ani {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	width: 50px;
+	height: 50px;
+	background: red;
+	-webkit-animation: bounce 5s ease-in-out;
+	-webkit-animation-iteration-count: 3;
+	-webkit-animation-delay: 2s;
+}
+#ani.bounce{
+	-webkit-animation: 'bounce' 1s 'ease-in-out';
+	-webkit-animation-iteration-count: 3;
+}
+#ani.fade{
+	-webkit-transition: opacity 0.4s linear;
+	-webkit-animation-delay: 3s;
+}
+
+@-webkit-keyframes bounce {  
+	0%, 100% {
+		-webkit-transform: translateY(0px);
+	}
+
+	20%, 60% {
+		-webkit-transform: translateY(20px);
+	}
+
+	80%, 40% {
+		-webkit-transform: translateY(-20px);
+	}
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+	background-color: transparent;
+	border: 0;
+	overflow: hidden;
+	/* IE 6/7 fallback */
+	*text-indent: -9999px;
+}
+
+.ir:before {
+	content: "";
+	display: block;
+	width: 0;
+	height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+	visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *	`contenteditable` attribute is included anywhere else in the document.
+ *	Otherwise it causes space to appear at the top and bottom of elements
+ *	that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *	`:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+	*zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+	/* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+	   (-o-min-device-pixel-ratio: 5/4),
+	   (-webkit-min-device-pixel-ratio: 1.25),
+	   (min-resolution: 120dpi) {
+	/* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+	* {
+		background: transparent !important;
+		color: #000 !important; /* Black prints faster: h5bp.com/s */
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
+
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
+
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+
+	/*
+	 * Don't show links for images, or javascript/internal links
+	 */
+
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content: "";
+	}
+
+	pre,
+	blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+
+	thead {
+		display: table-header-group; /* h5bp.com/t */
+	}
+
+	tr,
+	img {
+		page-break-inside: avoid;
+	}
+
+	img {
+		max-width: 100% !important;
+	}
+
+	@page {
+		margin: 0.5cm;
+	}
+
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h2,
+	h3 {
+		page-break-after: avoid;
+	}
+}

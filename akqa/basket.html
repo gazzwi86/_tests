@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+
+	<title>Basket: AKQA</title>
+
+    <!-- Standard meta stuff -->
+    <meta name="keywords" content="akqa, basket, test">
+    <meta name="description" content="A test for AKQA to demostrate my coding ability">
+    <meta name="author" content="Gareth Williams">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+	
+	<!-- Stylesheets -->
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="library/css/main.css">
+
+	<!-- Google Analytics -->
+	<!-- <script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-XXXX-Y', 'auto');  // Replace with your property ID.
+		ga('send', 'pageview');
+	</script>-->
+</head>
+<body>
+	<!--[if lte IE 7]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<!-- The Header -->
+	<header>
+		<div class="container">
+			<h1>
+				<a id="home" href="/">
+					<img src="library/images/logo.png" alt="AKQA">
+				</a>
+			</h1>
+		</div>
+	</header>
+	
+	<!-- The Main Content -->
+	<section class="content">
+		<form method="post" action="basket.html" class="container">
+			<h2>Your Basket</h2>
+			<p>Items you have added to your basket are shown below.<br />
+			Adjust the quantities or remove items before continuing your purchase.</p>
+
+			<!-- Basket items table -->
+			<table class="basket_items">
+				<thead>
+					<th>Product</th>
+					<th class="text-center">Price</th>
+					<th class="text-center">Qty</th>
+					<th class="text-center">Cost</th>
+					<th class="text-center">&nbsp;</th>
+				</thead>
+
+				<!-- Item 1 -->
+				<tr id="item1">
+					<!-- Item title -->
+					<td>Cotton T-Shirt, Medium</td>
+
+					<!-- Item single cost -->
+					<td>&pound;<span class="single_cost">1.99</span></td>
+
+					<!-- Item quantity -->
+					<td class="qty_cell">
+						<input type="text" name="item1_qty" id="item1_qty" class="quantity sku1000" size="2" value="1">
+
+						<!-- Quantity buttons: if no js send get vars to url -->
+						<div class="amend_quantities">
+							<a href="basket.html?sku=1000&add=1" class="item1_qty up">+</a>
+							<a href="basket.html?sku=1000&remove=1" class="item1_qty down">-</a>
+						</div>
+					</td>
+
+					<!-- Item subtotal -->
+					<td class="text-center">&pound;<span class="quantity_cost">1.99</span></td>
+
+					<!-- The trash button: if no js pass get vars to url -->
+					<td class="text-center">
+						<a href="basket.html?sku=1000&clear=1" class="trash remove_item1">
+							<img src="library/images/trash.png">
+						</a>
+					</td>
+				</tr>
+
+				<!-- Item 2 -->
+				<tr id="item2">
+					<!-- Item title -->
+					<td>Baseball Cap, One Size</td>
+
+					<!-- Item single cost -->
+					<td>&pound;<span class="single_cost">2.99</span></td>
+
+					<!-- Item quantity -->
+					<td class="qty_cell">
+						<input type="text" name="item2_qty" id="item2_qty" class="quantity sku2000" size="2" value="2">
+
+						<!-- Quantity buttons: if no js send get vars to url -->
+						<div class="amend_quantities">
+							<a href="basket.html?sku=2000&add=1" class="item2_qty up">+</a>
+							<a href="basket.html?sku=2000&remove=1" class="item2_qty down">-</a>
+						</div>
+					</td>
+
+					<!-- Item subtotal -->
+					<td class="text-center">&pound;<span class="quantity_cost">5.98</span></td>
+
+					<!-- The trash button: if no js pass get vars to url -->
+					<td class="text-center">
+						<a href="basket.html?sku=2000&clear=1" class="trash remove_item2">
+							<img src="library/images/trash.png">
+						</a>
+					</td>
+				</tr>
+
+				<!-- Item 3 -->
+				<tr id="item3">
+					<!-- Item title -->
+					<td>Swim Shorts, Medium</td>
+
+					<!-- Item single cost -->
+					<td>&pound;<span class="single_cost">3.99</span></td>
+
+					<!-- Item quantity -->
+					<td class="qty_cell">
+						<input type="text" name="item3_qty" id="item3_qty" class="quantity sku3000" size="2" value="1">
+
+						<!-- Quantity buttons: if no js send get vars to url -->
+						<div class="amend_quantities">
+							<a href="basket.html?sku=3000&add=1" class="item3_qty up">+</a>
+							<a href="basket.html?sku=3000&remove=1" class="item3_qty down">-</a>
+						</div>
+					</td>
+
+					<!-- Item subtotal -->
+					<td class="text-center">&pound;<span class="quantity_cost">3.99</span></td>
+
+					<!-- The trash button: if no js pass get vars to url -->
+					<td class="text-center">
+						<a href="basket.html?sku=3000&clear=1" class="trash remove_item3">
+							<img src="library/images/trash.png">
+						</a>
+					</td>
+				</tr>
+			</table>
+
+			<!-- Subtotal items table -->
+			<table class="basket_subtotal">
+				<tr>
+					<td>Subtotal</td>
+					<td class="text-right">&pound;<span class="subtotal">11.96</span></td>
+				</tr>
+				<tr>
+					<td>VAT @ 20%</td>
+					<td class="text-right">&pound;<span class="vat">2.39</span></td>
+				</tr>
+			</table>
+			
+			<!-- Total items table -->
+			<table class="basket_total">
+				<tr>
+					<td>Total Cost</td>
+					<td class="text-right">&pound;<span class="total">14.35</span></td>
+				</tr>
+			</table>
+			
+			<!-- Checkout button -->
+			<input type="submit" class="buy_now_button" value="Buy Now &#0187;">
+		</form>
+	</section>
+	
+	<!-- The Footer -->
+	<footer>
+		<div class="container">
+			<p>&copy; <strong>AKQA Ltd.</strong> Registered in England 2964394</p>
+		</div>
+	</footer>
+	
+	<!-- JavaScript inclusion -->
+	<script src="library/scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+brew install ffmpeg boost taglib
+git clone -b release-4.12 git://github.com/echonest/echoprint-codegen.git
+cd echoprint-codegen/src/
+vi Makefile  # edit BOOST_CFLAGS and other variables as necessary
+	BOOST_CFLAGS=-I/usr/local/Cellar/boost
+makcd ../
+mv echoprint-codegen /usr/local/bin/
