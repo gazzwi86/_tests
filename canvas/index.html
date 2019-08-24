@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0
+      }
+
+      #canvas {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+
+    <script>
+      const baseImage = './murray.jpg'
+      const images = ['./slice.jpg']
+      const canvas = document.getElementById('canvas')
+      const ctx = canvas.getContext('2d');
+      const imgDimensions = [1440, 550]
+      const center = (canvasSize, imgSize) => (canvasSize - imgSize) / 2
+
+      const draw = () => {
+        canvas.width = document.body.offsetWidth;
+        canvas.height = document.body.offsetHeight;
+
+        let size = imgDimensions;
+        const canvasWidth = canvas.offsetWidth
+        const canvasHeight = canvas.offsetHeight
+        const widthRatio = canvasWidth / imgDimensions[0];
+        const heightRatio = canvasHeight / imgDimensions[1];
+        const width = imgDimensions[0] * heightRatio
+        const height = imgDimensions[1] * widthRatio
+
+        size[0] = canvasWidth;
+        size[1] = height;
+
+        if (height < canvasHeight) {
+          size[0] = width;
+          size[1] = canvasHeight;
+        }
+        
+        ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight)
+        
+        // base image
+        const img = new Image();
+        img.src = baseImage;
+        img.onload = () => {
+          ctx.drawImage(img, center(canvas.offsetWidth, size[0]), center(canvas.offsetHeight, size[1]), size[0], size[1])
+        }
+
+        // layers
+        setTimeout(() => {
+          images.map(image => {
+            const img = new Image();
+            img.src = image;
+            img.onload = () => {
+              const layerHeight = img.height * widthRatio
+              ctx.drawImage(img, 0, 0, canvasWidth, layerHeight)
+            }
+          })
+        }, 15)
+      }
+
+      window.addEventListener('resize', draw)
+
+      draw()
+    </script>
+  </body>
+</html>
